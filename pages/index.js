@@ -59,7 +59,7 @@ export default function Home() {
   // 0 - Pegar o array de dados do github 
   React.useEffect(function() {
     // GET
-    fetch('https://api.github.com/users/peas/followers')
+    fetch('https://api.github.com/users/camilaSangon/followers')
     .then(function (respostaDoServidor) {
       return respostaDoServidor.json();
     })
@@ -72,7 +72,7 @@ export default function Home() {
     fetch('https://graphql.datocms.com/', {
       method: 'POST',
       headers: {
-        'Authorization': '7f7590695431ea76f84616a4b4d32d',
+        'Authorization': '243fcd2e1ed3593094052df4383ef7',
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
@@ -102,8 +102,9 @@ export default function Home() {
   // 1 - Criar um box que vai ter um map, baseado nos items do array
   // que pegamos do GitHub
   return (
-    <>
-      <AlurakutMenu />
+     <>
+  
+     
       <MainGrid>
         {/* <Box style="grid-area: profileArea;"> */}
         <div className="profileArea" style={{ gridArea: 'profileArea' }}>
@@ -171,7 +172,7 @@ export default function Home() {
           </Box>
         </div>
         <div className="profileRelationsArea" style={{ gridArea: 'profileRelationsArea' }}>
-          <ProfileRelationsBox title="Seguidores" items={seguidores} />
+          <ProfileRelationsBox title="Seguidores" items={seguidores} /> 
           <ProfileRelationsBoxWrapper>
             <h2 className="smallTitle">
               Comunidades ({comunidades.length})
